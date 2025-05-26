@@ -1,33 +1,27 @@
 <?php
 /**
- * @package wppa-all-in-one-wp-migration-hooks-third-party-export
+ * Plugin Name: wppa-all-in-one-wp-migration-hooks-third-party-export
+ * Description: Custom hooks for all in one wp migration plugin to export only uploads directory and database.
+ * Version: 1.0
+ * Author: Erfan Ilyas / PressAgility.com
  */
-/*
-Plugin Name: wppa-all-in-one-wp-migration-hooks-third-party-export
-Plugin URI: https://pressagility.com/
-Description: Custom hooks for all in one wp migration plugin to export only uploads directory and database.
-Version: 1.0.0
-Author: Erfan Ilyas
-Author URI: https://pressagility.com/
-License: GPLv2 or later
-*/
 
 
 
 
 ###
-#pressagility: It is important that all WordPRess files should be commited through GIT.
+#pressagility:
 #This mu-plugin will only export uploads directory and Database.
 #please set the following "enabled_all_in_one_wp_migration" constant to true.
 ###
 
 
 define( 'enabled_all_in_one_wp_migration', true );
-#if have license for S3 client plugin set the following constant to true.
+#if you have a license for S3 client plugin set the following constant to true.
 define( 'enabled_all_in_one_wp_migration_s3_client_extension', true );
 
 
-
+//set your variables here
 //you can find these values on your control panel.
 define( 'WPPA_CLOUDFLARE_R2_ROOT_DIR_NAME', '' ); //set the root directory. prefixing the directory with _ will help sort the list on the top.
 define( 'WPPA_CLOUDFLARE_R2_ENDPOINT', '' );
