@@ -31,10 +31,9 @@ add_action('init', function () {
   }
   
   
+  // Strip query strings and Normalize URI: remove query string and trailing slash
   $request_uri = strtok($_SERVER['REQUEST_URI'], '?');
-
-  // Strip query strings
-  $request_uri = strtok($_SERVER['REQUEST_URI'], '?');
+  $request_uri = rtrim($request_uri, '/');
 
   // Check if request matches the loader.io token
   if ($request_uri === '/' . $allowedSiteIdsArray[$selectedKey]['loaderiokey']) {
